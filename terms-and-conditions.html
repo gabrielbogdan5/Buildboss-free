@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms & Conditions — BuildBoss FREE</title>
+<style>
+  :root {
+    --bg: #0e0e0e;
+    --sur: #1a1a1a;
+    --sur2: #242424;
+    --gold: #f5c518;
+    --txt: #f0f0f0;
+    --txt2: #aaa;
+    --txt3: #666;
+    --red: #e74c3c;
+    --green: #2ecc71;
+    --border: #2a2a2a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--txt); font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.7; }
+
+  header {
+    background: var(--sur);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .logo { font-size: 22px; font-weight: 800; letter-spacing: -0.5px; }
+  .logo span { color: var(--gold); }
+  .logo sub { font-size: 10px; font-weight: 600; color: var(--txt3); letter-spacing: 1px; text-transform: uppercase; margin-left: 2px; }
+  .badge {
+    margin-left: auto;
+    background: rgba(245,197,24,0.12);
+    color: var(--gold);
+    border: 1px solid rgba(245,197,24,0.3);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #1a1a1a 0%, #111 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 36px 20px 28px;
+    text-align: center;
+  }
+  .hero-icon { font-size: 40px; margin-bottom: 12px; }
+  .hero h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 8px; }
+  .hero h1 span { color: var(--gold); }
+  .hero p { color: var(--txt2); font-size: 13px; max-width: 480px; margin: 0 auto; }
+  .meta-row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+  }
+  .meta-chip {
+    background: var(--sur2);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 11px;
+    color: var(--txt2);
+  }
+  .meta-chip strong { color: var(--txt); }
+
+  .container { max-width: 720px; margin: 0 auto; padding: 28px 20px 60px; }
+
+  .toc {
+    background: var(--sur);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 28px;
+  }
+  .toc h3 { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--txt3); margin-bottom: 12px; }
+  .toc a {
+    display: block;
+    color: var(--txt2);
+    text-decoration: none;
+    font-size: 13px;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--border);
+    transition: color 0.2s;
+  }
+  .toc a:last-child { border-bottom: none; }
+  .toc a:hover { color: var(--gold); }
+  .toc a::before { content: '→ '; color: var(--gold); font-size: 11px; }
+
+  .section {
+    background: var(--sur);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-icon {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  .section-title { font-size: 15px; font-weight: 700; }
+  .section-num { font-size: 11px; color: var(--txt3); margin-top: 1px; }
+
+  .section p { color: var(--txt2); font-size: 13px; margin-bottom: 10px; }
+  .section p:last-child { margin-bottom: 0; }
+  .section strong { color: var(--txt); }
+
+  .warning-box {
+    background: rgba(231,76,60,0.06);
+    border: 1px solid rgba(231,76,60,0.25);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin: 12px 0;
+  }
+  .warning-box p { color: var(--txt); margin: 0; font-size: 13px; }
+
+  .gold-box {
+    background: rgba(245,197,24,0.06);
+    border: 1px solid rgba(245,197,24,0.2);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin: 12px 0;
+  }
+  .gold-box p { color: var(--txt); margin: 0; font-size: 13px; }
+
+  .list { list-style: none; padding: 0; margin: 10px 0; }
+  .list li {
+    color: var(--txt2);
+    font-size: 13px;
+    padding: 6px 0 6px 20px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .list li:last-child { border-bottom: none; }
+  .list li::before { content: '•'; color: var(--gold); position: absolute; left: 4px; }
+  .list li strong { color: var(--txt); }
+
+  .footer-legal {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--txt3);
+    font-size: 11px;
+    line-height: 1.8;
+  }
+  .footer-legal a { color: var(--gold); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Build<span>Boss</span><sub>PRO</sub></div>
+  <div class="badge">📄 Terms & Conditions</div>
+</header>
+
+<div class="hero">
+  <div class="hero-icon">📋</div>
+  <h1>Terms & <span>Conditions</span></h1>
+  <p>Please read these terms carefully before using BuildBoss FREE. By using the app, you agree to these terms.</p>
+  <div class="meta-row">
+    <div class="meta-chip"><strong>Effective:</strong> 30 May 2026</div>
+    <div class="meta-chip"><strong>Version:</strong> 2.0.0</div>
+    <div class="meta-chip"><strong>Governing Law:</strong> England & Wales</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="toc">
+    <h3>Contents</h3>
+    <a href="#t1">1. Acceptance of Terms</a>
+    <a href="#t2">2. Description of the App</a>
+    <a href="#t3">3. Permitted Use</a>
+    <a href="#t4">4. Not a Substitute for Professional Advice</a>
+    <a href="#t5">5. Health & Safety Compliance</a>
+    <a href="#t6">6. Limitation of Liability</a>
+    <a href="#t7">7. Intellectual Property</a>
+    <a href="#t8">8. User Responsibilities</a>
+    <a href="#t9">9. App Availability</a>
+    <a href="#t10">10. Governing Law</a>
+    <a href="#t11">11. Changes to Terms</a>
+    <a href="#t12">12. Contact</a>
+  </div>
+
+  <!-- 1 -->
+  <div class="section" id="t1">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(245,197,24,0.1)">✅</div>
+      <div><div class="section-title">Acceptance of Terms</div><div class="section-num">Section 1</div></div>
+    </div>
+    <p>By downloading, installing, or using <strong>BuildBoss FREE</strong> ("the App"), you agree to be bound by these Terms and Conditions ("Terms"). If you do not agree with any part of these Terms, you must not use the App.</p>
+    <p>These Terms apply to all users of the App, including site managers, supervisors, safety officers, and any other individuals using the App in a professional capacity.</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="section" id="t2">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(52,152,219,0.1)">🏗️</div>
+      <div><div class="section-title">Description of the App</div><div class="section-num">Section 2</div></div>
+    </div>
+    <p>BuildBoss FREE is a construction site management tool designed to assist with:</p>
+    <ul class="list">
+      <li><strong>Site Audits</strong> — documenting inspection issues and risk levels</li>
+      <li><strong>Toolbox Talks</strong> — preparing and recording safety briefings</li>
+      <li><strong>Daily Activity Briefings (DAB)</strong> — structured pre-work briefings</li>
+      <li><strong>Incident Reporting</strong> — recording accidents, near misses, and dangerous occurrences</li>
+      <li><strong>PDF Export</strong> — generating downloadable reports for site records</li>
+    </ul>
+    <p>The App operates entirely offline on your device. No internet connection is required for core functionality.</p>
+  </div>
+
+  <!-- 3 -->
+  <div class="section" id="t3">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(46,204,113,0.1)">✔️</div>
+      <div><div class="section-title">Permitted Use</div><div class="section-num">Section 3</div></div>
+    </div>
+    <p>You may use BuildBoss FREE for lawful, professional construction site management purposes. You agree <strong>not</strong> to:</p>
+    <ul class="list">
+      <li>Use the App to create fraudulent, misleading, or falsified site records</li>
+      <li>Misrepresent incidents, signatures, or inspection results</li>
+      <li>Use the App in any way that violates applicable law or regulation</li>
+      <li>Attempt to reverse-engineer, copy, or redistribute the App's source code</li>
+      <li>Use the App to replace legally mandated documentation processes without proper verification</li>
+    </ul>
+  </div>
+
+  <!-- 4 -->
+  <div class="section" id="t4">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(231,76,60,0.1)">⚠️</div>
+      <div><div class="section-title">Not a Substitute for Professional Advice</div><div class="section-num">Section 4</div></div>
+    </div>
+    <div class="warning-box">
+      <p>⚠️ <strong>Important:</strong> BuildBoss FREE is an <strong>informational and documentation tool only</strong>. It does not constitute legal, health & safety, engineering, or professional advice of any kind.</p>
+    </div>
+    <p>The App is designed to assist with record-keeping and briefing preparation. It does <strong>not</strong> replace:</p>
+    <ul class="list">
+      <li>Formal health and safety training or qualifications</li>
+      <li>Professional risk assessments conducted by competent persons</li>
+      <li>Legal obligations under the Health and Safety at Work etc. Act 1974</li>
+      <li>CDM Regulations 2015 requirements</li>
+      <li>RIDDOR 2013 reporting obligations</li>
+      <li>Any other applicable legislation or professional standards</li>
+    </ul>
+    <p>Users are solely responsible for ensuring compliance with all applicable laws, regulations, and professional standards in their jurisdiction.</p>
+  </div>
+
+  <!-- 5 -->
+  <div class="section" id="t5">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(245,197,24,0.1)">🦺</div>
+      <div><div class="section-title">Health & Safety Compliance</div><div class="section-num">Section 5</div></div>
+    </div>
+    <p>The App includes reference to UK health and safety legislation including RIDDOR 2013. Users must independently verify all legal requirements with the relevant authorities.</p>
+    <div class="gold-box">
+      <p>📋 <strong>RIDDOR Reminder:</strong> Certain workplace incidents must be reported to the Health and Safety Executive (HSE) under the Reporting of Injuries, Diseases and Dangerous Occurrences Regulations 2013. The App provides a reminder of this obligation but does <strong>not</strong> submit reports on your behalf. Visit <strong>hse.gov.uk/riddor</strong> to fulfil your legal reporting duties.</p>
+    </div>
+    <p>The toolbox talk topics provided within the App are for reference and guidance only. They must be reviewed and adapted by a competent person before use on any specific site.</p>
+  </div>
+
+  <!-- 6 -->
+  <div class="section" id="t6">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(231,76,60,0.1)">🛡️</div>
+      <div><div class="section-title">Limitation of Liability</div><div class="section-num">Section 6</div></div>
+    </div>
+    <div class="warning-box">
+      <p>⚠️ To the fullest extent permitted by law, the developers of BuildBoss FREE accept <strong>no liability</strong> for any loss, injury, damage, regulatory penalty, or legal consequence arising from the use of or reliance upon this App or its content.</p>
+    </div>
+    <p>Specifically, we accept no liability for:</p>
+    <ul class="list">
+      <li>Workplace accidents or injuries, whether or not the App was used</li>
+      <li>Failure to report incidents under RIDDOR or other legislation</li>
+      <li>Loss of data due to device failure, storage clearing, or app reinstallation</li>
+      <li>Inaccuracies in toolbox talk content or legislative references</li>
+      <li>Any loss arising from reliance on App-generated reports as legally sufficient records</li>
+    </ul>
+    <p>Nothing in these Terms limits liability for death or personal injury caused by negligence, or for fraud or fraudulent misrepresentation, to the extent such limitation is not permitted by law.</p>
+  </div>
+
+  <!-- 7 -->
+  <div class="section" id="t7">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(155,89,182,0.1)">©️</div>
+      <div><div class="section-title">Intellectual Property</div><div class="section-num">Section 7</div></div>
+    </div>
+    <p>All content, design, code, graphics, and functionality within BuildBoss FREE are the intellectual property of the developer and are protected by copyright law.</p>
+    <p>You are granted a <strong>limited, non-exclusive, non-transferable licence</strong> to use the App for its intended purpose. You may not:</p>
+    <ul class="list">
+      <li>Copy, reproduce, or distribute the App or its content</li>
+      <li>Modify, adapt, or create derivative works</li>
+      <li>Sell, sublicense, or commercially exploit the App</li>
+      <li>Remove or alter any proprietary notices or branding</li>
+    </ul>
+    <p>Reports and documents generated by the App from data you enter are your own records and remain your property.</p>
+  </div>
+
+  <!-- 8 -->
+  <div class="section" id="t8">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(52,152,219,0.1)">👤</div>
+      <div><div class="section-title">User Responsibilities</div><div class="section-num">Section 8</div></div>
+    </div>
+    <p>As the user of BuildBoss FREE, you are responsible for:</p>
+    <ul class="list">
+      <li>Ensuring all information entered into the App is accurate and complete</li>
+      <li>Maintaining appropriate backup copies of important records</li>
+      <li>Securing your device against unauthorised access</li>
+      <li>Complying with all applicable health and safety legislation in your jurisdiction</li>
+      <li>Ensuring digital signatures captured via the App are obtained with the knowledge and consent of the signatory</li>
+      <li>Verifying that App-generated reports meet any formal legal or contractual requirements before relying on them</li>
+    </ul>
+  </div>
+
+  <!-- 9 -->
+  <div class="section" id="t9">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(46,204,113,0.1)">📱</div>
+      <div><div class="section-title">App Availability</div><div class="section-num">Section 9</div></div>
+    </div>
+    <p>BuildBoss FREE operates as a Progressive Web App (PWA) and is designed to function offline after initial installation. However, we do not guarantee uninterrupted availability of any online-dependent features.</p>
+    <p>We reserve the right to update, modify, or discontinue the App at any time without prior notice. We are not liable for any loss resulting from such changes.</p>
+  </div>
+
+  <!-- 10 -->
+  <div class="section" id="t10">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(245,197,24,0.1)">⚖️</div>
+      <div><div class="section-title">Governing Law</div><div class="section-num">Section 10</div></div>
+    </div>
+    <p>These Terms are governed by and construed in accordance with the laws of <strong>England and Wales</strong>. Any disputes arising from use of the App shall be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+    <p>If you are using the App outside the UK, you remain responsible for compliance with local laws in your jurisdiction.</p>
+  </div>
+
+  <!-- 11 -->
+  <div class="section" id="t11">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(155,89,182,0.1)">📝</div>
+      <div><div class="section-title">Changes to Terms</div><div class="section-num">Section 11</div></div>
+    </div>
+    <p>We reserve the right to update these Terms at any time. The <strong>Effective Date</strong> at the top of this page will reflect the most recent revision.</p>
+    <p>Continued use of the App after changes are posted constitutes acceptance of the revised Terms. We recommend reviewing these Terms periodically.</p>
+  </div>
+
+  <!-- 12 -->
+  <div class="section" id="t12">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(245,197,24,0.1)">📬</div>
+      <div><div class="section-title">Contact</div><div class="section-num">Section 12</div></div>
+    </div>
+    <p>For questions regarding these Terms and Conditions, please contact us via the Google Play Store listing page for BuildBoss FREE.</p>
+  </div>
+
+  <div class="footer-legal">
+    <p>© 2026 BuildBoss FREE · All rights reserved</p>
+    <p style="margin-top:4px"><a href="/privacy-policy.html">Privacy Policy</a> · <a href="/legal-disclaimer.html">Legal Disclaimer</a></p>
+    <p style="margin-top:8px; font-size:10px; color:var(--txt3)">Governed by the laws of England and Wales</p>
+  </div>
+
+</div>
+
+  <!-- Contact Section -->
+  <div style="margin:24px auto; max-width:680px; background:var(--sur2,#1e2028); border:1px solid var(--bdr,#2a2d35); border-radius:14px; padding:20px 24px;">
+    <p style="font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--gold,#f7c53b); margin-bottom:12px">Contact &amp; Support</p>
+    <p style="font-size:13px; color:var(--txt2,#b0b8c8); margin-bottom:8px">
+      📧 <a href="mailto:buildboss.free@gmail.com" style="color:var(--gold,#f7c53b); text-decoration:none; font-weight:600">buildboss.free@gmail.com</a>
+    </p>
+    <p style="font-size:13px; color:var(--txt2,#b0b8c8)">
+      🐙 <a href="https://github.com/gabrielbogdan5/buildboss-free" target="_blank" style="color:var(--gold,#f7c53b); text-decoration:none; font-weight:600">github.com/gabrielbogdan5/buildboss-free</a>
+    </p>
+  </div>
+
+</body>
+</html>
