@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0a0c0f">
+<title>Contact & Feedback — BuildBoss FREE</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0c0f;--sur:#111418;--sur2:#181c22;--bdr:#252d3a;--bdr2:#2e3848;--gold:#f5c433;--glow:rgba(245,196,51,.18);--txt:#edf0f5;--txt2:#8a95a6;--txt3:#4a5568;--green:#2ecc71;--r:14px;--rsm:10px;--rlg:20px;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--txt);min-height:100dvh;max-width:480px;margin:0 auto;padding-bottom:40px;}
+a{color:var(--gold);text-decoration:none;}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;background:var(--sur);border-bottom:1px solid var(--bdr);position:sticky;top:0;z-index:100;}
+.logo{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;letter-spacing:-.5px;line-height:1;text-decoration:none;color:var(--txt);}
+.logo span{color:var(--gold);}
+.logo small{font-size:10px;font-weight:800;letter-spacing:2px;color:var(--txt3);display:block;}
+.back-btn{background:var(--sur2);border:1px solid var(--bdr);border-radius:var(--rsm);color:var(--txt2);padding:8px 14px;font-family:'Barlow',sans-serif;font-size:13px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:6px;}
+.hazard-bar{height:6px;background:repeating-linear-gradient(-45deg,var(--gold),var(--gold) 6px,#111 6px,#111 12px);}
+.content{padding:20px 16px;}
+.page-title{font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:900;letter-spacing:-.5px;margin-bottom:4px;}
+.page-title span{color:var(--gold);}
+.page-sub{font-size:13px;color:var(--txt2);margin-bottom:24px;}
+/* Direct contact cards */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px;}
+.contact-card{background:var(--sur);border:1px solid var(--bdr);border-radius:var(--r);padding:16px;text-decoration:none;color:var(--txt);display:flex;flex-direction:column;gap:6px;transition:border-color .2s;}
+.contact-card:hover{border-color:var(--gold);}
+.contact-card-icon{font-size:24px;}
+.contact-card-label{font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--txt3);}
+.contact-card-value{font-size:13px;font-weight:700;color:var(--gold);}
+/* Form card */
+.card{background:var(--sur);border:1px solid var(--bdr);border-radius:var(--rlg);overflow:hidden;margin-bottom:12px;}
+.card-header{display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid var(--bdr);}
+.card-icon{width:40px;height:40px;background:var(--sur2);border-radius:var(--rsm);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.card-title{font-weight:800;font-size:15px;}
+.card-desc{font-size:11px;color:var(--txt2);margin-top:1px;}
+.card-body{padding:14px 16px;display:flex;flex-direction:column;gap:14px;}
+.label{font-size:11px;color:var(--txt2);margin-bottom:5px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;}
+.inp{background:var(--sur2);border:1px solid var(--bdr);border-radius:var(--rsm);color:var(--txt);font-family:'Barlow',sans-serif;font-size:14px;padding:12px 14px;width:100%;outline:none;transition:border-color .2s;}
+.inp::placeholder{color:var(--txt3);}
+.inp:focus{border-color:var(--gold);box-shadow:0 0 0 3px var(--glow);}
+textarea.inp{resize:none;line-height:1.6;}
+select.inp{-webkit-appearance:none;cursor:pointer;}
+/* Stars */
+.stars{display:flex;gap:8px;margin-top:4px;}
+.star{font-size:28px;cursor:pointer;opacity:.35;transition:opacity .15s,transform .15s;user-select:none;}
+.star.lit{opacity:1;}
+.star:hover{transform:scale(1.2);}
+.btn-primary{background:var(--gold);color:#111;border:none;border-radius:var(--r);padding:14px 20px;font-family:'Barlow',sans-serif;font-size:15px;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;width:100%;transition:transform .15s,box-shadow .15s;}
+.btn-primary:active{transform:scale(.97);}
+.btn-primary:hover{box-shadow:0 6px 20px rgba(245,196,51,.35);}
+/* Success state */
+.success-msg{display:none;background:rgba(46,204,113,.08);border:1px solid rgba(46,204,113,.3);border-radius:var(--r);padding:16px;text-align:center;}
+.success-msg.show{display:block;}
+.success-icon{font-size:36px;margin-bottom:8px;}
+.success-title{font-weight:800;font-size:16px;color:#2ecc71;margin-bottom:4px;}
+.success-sub{font-size:13px;color:var(--txt2);}
+/* Response time notice */
+.notice{background:var(--sur2);border:1px solid var(--bdr);border-radius:var(--rsm);padding:12px 14px;display:flex;gap:10px;align-items:flex-start;margin-bottom:12px;}
+.notice-icon{font-size:16px;flex-shrink:0;margin-top:1px;}
+.notice-text{font-size:12px;color:var(--txt2);line-height:1.5;}
+.notice-text strong{color:var(--txt);}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a href="index.html" class="logo">Build<span>Boss</span><small>FREE</small></a>
+  <a href="index.html" class="back-btn">← Home</a>
+</div>
+<div class="hazard-bar"></div>
+
+<div class="content">
+  <div class="page-title">Contact &amp; <span>Feedback</span></div>
+  <p class="page-sub">We read every message — your feedback shapes the app</p>
+
+  <!-- Direct contact -->
+  <div class="contact-grid">
+    <a href="mailto:buildboss.free@gmail.com" class="contact-card">
+      <div class="contact-card-icon">✉️</div>
+      <div class="contact-card-label">Email Support</div>
+      <div class="contact-card-value">buildbosspro<br>@gmail.com</div>
+    </a>
+    <a href="help.html" class="contact-card">
+      <div class="contact-card-icon">❓</div>
+      <div class="contact-card-label">Help & FAQ</div>
+      <div class="contact-card-value">Browse common questions</div>
+    </a>
+  </div>
+
+  <div class="notice">
+    <span class="notice-icon">⏱️</span>
+    <div class="notice-text"><strong>Response time:</strong> We aim to reply within 1–2 business days. For urgent issues, please include your device and app version.</div>
+  </div>
+
+  <!-- Feedback form -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon">💬</div>
+      <div>
+        <div class="card-title">Send Feedback</div>
+        <div class="card-desc">Report a bug, suggest a feature, or share a thought</div>
+      </div>
+    </div>
+    <div class="card-body" id="feedbackForm">
+      <div>
+        <div class="label">Your Name (optional)</div>
+        <input type="text" class="inp" id="fb_name" placeholder="e.g. John Smith">
+      </div>
+      <div>
+        <div class="label">Email (for a reply)</div>
+        <input type="email" class="inp" id="fb_email" placeholder="your@email.com">
+      </div>
+      <div>
+        <div class="label">Feedback Type</div>
+        <select class="inp" id="fb_type">
+          <option value="">— Select type —</option>
+          <option value="bug">🐛 Bug Report</option>
+          <option value="feature">💡 Feature Request</option>
+          <option value="praise">⭐ Praise</option>
+          <option value="other">💬 General Feedback</option>
+        </select>
+      </div>
+      <div>
+        <div class="label">Rate Your Experience</div>
+        <div class="stars" id="starRating">
+          <span class="star" data-v="1" onclick="rateStar(1)">★</span>
+          <span class="star" data-v="2" onclick="rateStar(2)">★</span>
+          <span class="star" data-v="3" onclick="rateStar(3)">★</span>
+          <span class="star" data-v="4" onclick="rateStar(4)">★</span>
+          <span class="star" data-v="5" onclick="rateStar(5)">★</span>
+        </div>
+      </div>
+      <div>
+        <div class="label">Your Message *</div>
+        <textarea class="inp" id="fb_msg" rows="5" placeholder="Describe your feedback in detail…"></textarea>
+      </div>
+      <button class="btn-primary" onclick="submitFeedback()">📨 Send Feedback</button>
+    </div>
+    <div class="card-body" id="feedbackSuccess" style="display:none">
+      <div class="success-msg show">
+        <div class="success-icon">✅</div>
+        <div class="success-title">Message Sent!</div>
+        <div class="success-sub">Thanks for your feedback. If you left an email, we'll get back to you within 1–2 business days.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+let starVal=0;
+function rateStar(v){
+  starVal=v;
+  document.querySelectorAll('.star').forEach(s=>{
+    s.classList.toggle('lit',parseInt(s.dataset.v)<=v);
+  });
+}
+function submitFeedback(){
+  const msg=document.getElementById('fb_msg').value.trim();
+  const type=document.getElementById('fb_type').value;
+  if(!msg){alert('Please enter a message before sending.');return;}
+  const name=document.getElementById('fb_name').value.trim()||'Anonymous';
+  const email=document.getElementById('fb_email').value.trim();
+  const subject=encodeURIComponent('BuildBoss FREE Feedback'+(type?' — '+type.charAt(0).toUpperCase()+type.slice(1):''));
+  const body=encodeURIComponent(
+    'Name: '+name+'\n'+
+    (email?'Email: '+email+'\n':'')+
+    'Type: '+(type||'General')+'\n'+
+    'Rating: '+(starVal?starVal+'/5':'Not rated')+'\n\n'+
+    msg
+  );
+  window.location.href='mailto:buildboss.free@gmail.com?subject='+subject+'&body='+body;
+  document.getElementById('feedbackForm').style.display='none';
+  document.getElementById('feedbackSuccess').style.display='flex';
+}
+</script>
+</body>
+</html>

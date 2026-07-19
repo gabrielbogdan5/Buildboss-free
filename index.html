@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BuildBoss — Construction Management App</title>
+<meta name="description" content="BuildBoss is a professional construction management app for site audits, toolbox talks, daily briefings, incident reports and more. Get it on Google Play.">
+<meta name="theme-color" content="#1a1c22">
+<link rel="icon" href="icon-192x192.png">
+<link rel="apple-touch-icon" href="icon-192x192.png">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{
+    --gold:#f5c433; --bg:#1a1c22; --sur:#22242c; --sur2:#2a2d36;
+    --bdr:#363944; --txt:#f2f3f5; --txt2:#b8bcc6; --txt3:#7d818f;
+  }
+  body{
+    font-family:'Barlow',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    background:var(--bg); color:var(--txt); min-height:100vh;
+    display:flex; flex-direction:column; align-items:center;
+    padding:48px 20px 32px;
+  }
+  .logo{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:38px;letter-spacing:-.5px;margin-bottom:4px;}
+  .logo span{color:var(--gold);}
+  .tagline{color:var(--txt2);font-size:14px;text-align:center;max-width:340px;margin-bottom:36px;line-height:1.5;}
+  .card{
+    background:var(--sur); border:1px solid var(--bdr); border-radius:16px;
+    padding:22px; max-width:400px; width:100%; margin-bottom:16px; text-align:center;
+  }
+  .card.pro{border-color:var(--gold);background:linear-gradient(135deg,rgba(245,196,51,.10),rgba(245,196,51,.03));}
+  .card h2{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;margin-bottom:4px;}
+  .card.pro h2{color:var(--gold);}
+  .card p{color:var(--txt2);font-size:12.5px;line-height:1.5;margin-bottom:16px;}
+  .btn{
+    display:inline-block; width:100%; background:var(--sur2); color:var(--txt);
+    border:1px solid var(--bdr); border-radius:10px; padding:13px; font-size:14px;
+    font-weight:700; text-decoration:none; transition:background .15s;
+  }
+  .card.pro .btn{background:var(--gold);color:#1a1c22;border-color:var(--gold);}
+  .features{max-width:400px;width:100%;margin:8px 0 32px;display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .feature{background:var(--sur);border:1px solid var(--bdr);border-radius:10px;padding:12px;font-size:11.5px;color:var(--txt2);text-align:center;}
+  .feature b{display:block;color:var(--txt);font-size:12.5px;margin-bottom:2px;}
+  .links{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;font-size:12px;color:var(--txt3);margin-top:auto;padding-top:24px;}
+  .links a{color:var(--txt3);text-decoration:none;}
+  .links a:hover{color:var(--txt2);}
+  .foot{font-size:11px;color:var(--txt3);margin-top:12px;}
+</style>
+</head>
+<body>
+
+  <div class="logo">Build<span>Boss</span></div>
+  <div class="tagline">Site audits, toolbox talks, daily briefings, incident reports &amp; more — built for construction site managers and supervisors.</div>
+
+  <div class="card pro">
+    <h2>BuildBoss PRO</h2>
+    <p>No ads · 3 photos per issue · One-time purchase</p>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=dev.workers.gabrielbogdanh.buildboss_pro.twa" target="_blank" rel="noopener">Get it on Google Play</a>
+  </div>
+
+  <div class="card">
+    <h2>BuildBoss FREE</h2>
+    <p>Free with ads · 1 photo per issue · Watch a short ad to unlock more</p>
+    <!-- TODO: update once BuildBoss FREE is live on Google Play -->
+    <a class="btn" href="https://play.google.com/store/apps/details?id=app.buildbossfree.gabrielbogdan5" target="_blank" rel="noopener">Get it on Google Play</a>
+  </div>
+
+  <div class="features">
+    <div class="feature"><b>🔍 Site Audit</b>Log issues &amp; export PDF reports</div>
+    <div class="feature"><b>💬 Toolbox Talk</b>20+ safety briefing topics</div>
+    <div class="feature"><b>📅 Daily Briefing</b>Activity &amp; hazard log</div>
+    <div class="feature"><b>🚨 Incident Report</b>With RIDDOR reminder</div>
+  </div>
+
+  <div class="links">
+    <a href="about.html">About</a>
+    <a href="help.html">Help &amp; FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-and-conditions.html">Terms</a>
+    <a href="legal-disclaimer.html">Legal Disclaimer</a>
+  </div>
+  <div class="foot">© 2026 BuildBoss. All rights reserved.</div>
+
+</body>
+</html>

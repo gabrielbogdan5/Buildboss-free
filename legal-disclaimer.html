@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Legal Disclaimer — BuildBoss FREE</title>
+<style>
+  :root {
+    --bg: #0e0e0e;
+    --sur: #1a1a1a;
+    --sur2: #242424;
+    --gold: #f5c518;
+    --txt: #f0f0f0;
+    --txt2: #aaa;
+    --txt3: #666;
+    --red: #e74c3c;
+    --orange: #e67e22;
+    --border: #2a2a2a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--txt); font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.7; }
+
+  header {
+    background: var(--sur);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .logo { font-size: 22px; font-weight: 800; letter-spacing: -0.5px; }
+  .logo span { color: var(--gold); }
+  .logo sub { font-size: 10px; font-weight: 600; color: var(--txt3); letter-spacing: 1px; text-transform: uppercase; margin-left: 2px; }
+  .badge {
+    margin-left: auto;
+    background: rgba(231,76,60,0.12);
+    color: #e74c3c;
+    border: 1px solid rgba(231,76,60,0.3);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #1a1a1a 0%, #111 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 36px 20px 28px;
+    text-align: center;
+  }
+  .hero-icon { font-size: 40px; margin-bottom: 12px; }
+  .hero h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 8px; }
+  .hero h1 span { color: var(--gold); }
+  .hero p { color: var(--txt2); font-size: 13px; max-width: 480px; margin: 0 auto; }
+  .meta-row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+  }
+  .meta-chip {
+    background: var(--sur2);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 11px;
+    color: var(--txt2);
+  }
+  .meta-chip strong { color: var(--txt); }
+
+  .container { max-width: 720px; margin: 0 auto; padding: 28px 20px 60px; }
+
+  .critical-banner {
+    background: rgba(231,76,60,0.08);
+    border: 2px solid rgba(231,76,60,0.35);
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  .critical-banner .cb-icon { font-size: 32px; margin-bottom: 8px; }
+  .critical-banner h2 { font-size: 16px; font-weight: 800; color: #e74c3c; margin-bottom: 8px; letter-spacing: 0.3px; }
+  .critical-banner p { font-size: 13px; color: var(--txt2); }
+
+  .section {
+    background: var(--sur);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-icon {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  .section-title { font-size: 15px; font-weight: 700; }
+  .section-sub { font-size: 11px; color: var(--txt3); margin-top: 1px; }
+
+  .section p { color: var(--txt2); font-size: 13px; margin-bottom: 10px; }
+  .section p:last-child { margin-bottom: 0; }
+  .section strong { color: var(--txt); }
+
+  .list { list-style: none; padding: 0; margin: 10px 0; }
+  .list li {
+    color: var(--txt2);
+    font-size: 13px;
+    padding: 7px 0 7px 20px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .list li:last-child { border-bottom: none; }
+  .list li::before { content: '•'; color: var(--gold); position: absolute; left: 4px; }
+  .list li strong { color: var(--txt); }
+
+  .law-card {
+    background: var(--sur2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin: 8px 0;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .law-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+  .law-title { font-size: 13px; font-weight: 700; color: var(--txt); margin-bottom: 2px; }
+  .law-desc { font-size: 12px; color: var(--txt3); line-height: 1.5; }
+  .law-link { font-size: 11px; color: var(--gold); text-decoration: none; margin-top: 4px; display: block; }
+
+  .gold-box {
+    background: rgba(245,197,24,0.06);
+    border: 1px solid rgba(245,197,24,0.2);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin: 12px 0;
+  }
+  .gold-box p { color: var(--txt); margin: 0; font-size: 13px; }
+
+  .footer-legal {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--txt3);
+    font-size: 11px;
+    line-height: 1.8;
+  }
+  .footer-legal a { color: var(--gold); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Build<span>Boss</span><sub>PRO</sub></div>
+  <div class="badge">⚠️ Legal Disclaimer</div>
+</header>
+
+<div class="hero">
+  <div class="hero-icon">⚠️</div>
+  <h1>Legal <span>Disclaimer</span></h1>
+  <p>Important legal information about the limitations of BuildBoss FREE and your responsibilities as a user.</p>
+  <div class="meta-row">
+    <div class="meta-chip"><strong>Effective:</strong> 30 May 2026</div>
+    <div class="meta-chip"><strong>Version:</strong> 2.0.0</div>
+    <div class="meta-chip"><strong>For:</strong> All Users</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="critical-banner">
+    <div class="cb-icon">🚨</div>
+    <h2>IMPORTANT — READ BEFORE USE</h2>
+    <p>BuildBoss FREE is an informational tool only. It does not replace legally required safety training, competent person assessments, or statutory reporting obligations. You remain fully responsible for compliance with all applicable laws.</p>
+  </div>
+
+  <!-- General -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(245,197,24,0.1)">📋</div>
+      <div><div class="section-title">General Disclaimer</div><div class="section-sub">Scope of application</div></div>
+    </div>
+    <p>The information, templates, checklists, and toolbox talk content provided within <strong>BuildBoss FREE</strong> are intended for general reference and administrative assistance only.</p>
+    <p>Nothing within this App constitutes professional health and safety advice, legal advice, engineering advice, or any other form of regulated professional advice. Users must consult suitably qualified professionals for site-specific guidance.</p>
+    <p>The developers of BuildBoss FREE make no warranty, express or implied, as to the accuracy, completeness, or fitness for purpose of any content within the App.</p>
+  </div>
+
+  <!-- H&S -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(230,126,34,0.1)">🦺</div>
+      <div><div class="section-title">Health & Safety</div><div class="section-sub">Legal responsibilities</div></div>
+    </div>
+    <p>Use of this App does <strong>not</strong> fulfil, replace, or satisfy any legal health and safety obligation. The following responsibilities remain entirely with the user and/or their employer:</p>
+    <ul class="list">
+      <li><strong>Risk Assessments</strong> — must be conducted by a competent person as required by the Management of Health and Safety at Work Regulations 1999</li>
+      <li><strong>Method Statements / RAMS</strong> — must be prepared for all significant site activities</li>
+      <li><strong>Toolbox Talks</strong> — App content is a reference guide only; talks must be delivered by a suitably qualified person and adapted for site conditions</li>
+      <li><strong>Site Inductions</strong> — the App does not provide legally compliant induction records</li>
+      <li><strong>PPE & Controls</strong> — the App reminds users of controls but does not verify they are in place</li>
+    </ul>
+    <div class="gold-box">
+      <p>⚖️ <strong>Competent Person Requirement:</strong> Under the Health and Safety at Work etc. Act 1974 and associated regulations, employers must appoint competent persons to manage health and safety. BuildBoss FREE is a tool to assist competent persons — it does not make a user competent.</p>
+    </div>
+  </div>
+
+  <!-- RIDDOR -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(231,76,60,0.1)">🚨</div>
+      <div><div class="section-title">RIDDOR Reporting</div><div class="section-sub">Statutory obligation — UK</div></div>
+    </div>
+    <p>The Reporting of Injuries, Diseases and Dangerous Occurrences Regulations 2013 (<strong>RIDDOR</strong>) requires employers and self-employed persons to report certain workplace incidents to the Health and Safety Executive (HSE).</p>
+    <p>Reportable incidents include:</p>
+    <ul class="list">
+      <li><strong>Fatalities</strong> — deaths of workers or non-workers resulting from a work-related accident</li>
+      <li><strong>Specified injuries</strong> — fractures (other than fingers/thumbs/toes), amputations, loss of sight, crush injuries to head or torso, burns, scalping, loss of consciousness, any injury requiring resuscitation or overnight hospitalisation</li>
+      <li><strong>Over-7-day incapacitation</strong> — where a worker cannot perform their normal duties for more than 7 consecutive days (not counting the day of the accident)</li>
+      <li><strong>Over-3-day incapacitation</strong> — must be recorded (not reported) if worker cannot work for more than 3 days</li>
+      <li><strong>Dangerous occurrences</strong> — specified near-miss events (scaffold collapse, explosion, contact with overhead lines, etc.)</li>
+      <li><strong>Occupational diseases</strong> — including carpal tunnel syndrome, occupational dermatitis, hand-arm vibration syndrome, and others</li>
+    </ul>
+    <div class="law-card">
+      <div class="law-icon">🏛️</div>
+      <div>
+        <div class="law-title">Report to HSE</div>
+        <div class="law-desc">RIDDOR reports must be submitted to the HSE directly. BuildBoss FREE does not submit reports on your behalf.</div>
+        <a class="law-link" href="https://www.hse.gov.uk/riddor" target="_blank">→ hse.gov.uk/riddor</a>
+      </div>
+    </div>
+    <p><strong>Failure to report a RIDDOR reportable incident is a criminal offence</strong> under UK law and may result in prosecution and significant fines.</p>
+  </div>
+
+  <!-- Applicable Law -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(52,152,219,0.1)">📚</div>
+      <div><div class="section-title">Key Applicable Legislation (UK)</div><div class="section-sub">Reference only — not exhaustive</div></div>
+    </div>
+    <p>Users of BuildBoss FREE operating in the UK should be familiar with the following legislation. This list is for reference only and is not exhaustive:</p>
+    <div class="law-card">
+      <div class="law-icon">⚖️</div>
+      <div>
+        <div class="law-title">Health and Safety at Work etc. Act 1974</div>
+        <div class="law-desc">Primary legislation governing workplace health and safety in the UK. Places duties on employers, employees, and self-employed persons.</div>
+      </div>
+    </div>
+    <div class="law-card">
+      <div class="law-icon">📐</div>
+      <div>
+        <div class="law-title">Construction (Design and Management) Regulations 2015 (CDM)</div>
+        <div class="law-desc">Governs health and safety in construction projects. Defines duties for clients, designers, principal designers, principal contractors, and contractors.</div>
+      </div>
+    </div>
+    <div class="law-card">
+      <div class="law-icon">🚨</div>
+      <div>
+        <div class="law-title">RIDDOR 2013</div>
+        <div class="law-desc">Requires reporting of work-related deaths, injuries, occupational diseases and dangerous occurrences to the HSE.</div>
+        <a class="law-link" href="https://www.hse.gov.uk/riddor" target="_blank">→ hse.gov.uk/riddor</a>
+      </div>
+    </div>
+    <div class="law-card">
+      <div class="law-icon">🧠</div>
+      <div>
+        <div class="law-title">Management of Health and Safety at Work Regulations 1999</div>
+        <div class="law-desc">Requires employers to carry out risk assessments and appoint competent persons to manage H&S.</div>
+      </div>
+    </div>
+    <div class="law-card">
+      <div class="law-icon">🪜</div>
+      <div>
+        <div class="law-title">Work at Height Regulations 2005</div>
+        <div class="law-desc">Governs all work at height activities. Requires proper planning, supervision, and use of appropriate equipment.</div>
+      </div>
+    </div>
+    <div class="law-card">
+      <div class="law-icon">🔒</div>
+      <div>
+        <div class="law-title">UK GDPR & Data Protection Act 2018</div>
+        <div class="law-desc">Governs the handling of personal data. See our Privacy Policy for how BuildBoss FREE complies.</div>
+        <a class="law-link" href="privacy-policy.html">→ BuildBoss FREE Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Digital Signatures -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(155,89,182,0.1)">✍️</div>
+      <div><div class="section-title">Digital Signatures</div><div class="section-sub">Legal status</div></div>
+    </div>
+    <p>BuildBoss FREE allows users to capture digital signatures on-screen. Under the <strong>Electronic Communications Act 2000</strong> and <strong>eIDAS Regulation</strong> principles adopted in UK law, electronic signatures can be legally valid.</p>
+    <p>However, the legal validity of any signature depends on context. Users are responsible for:</p>
+    <ul class="list">
+      <li>Ensuring signatories are who they claim to be</li>
+      <li>Ensuring consent is freely and knowingly given</li>
+      <li>Verifying whether a simple electronic signature is sufficient for the specific document type or legal requirement</li>
+      <li>Retaining signed records securely and in an accessible format</li>
+    </ul>
+    <p>For documents requiring qualified or advanced electronic signatures under specific legislation, consult a legal professional.</p>
+  </div>
+
+  <!-- No Liability -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(231,76,60,0.1)">🛡️</div>
+      <div><div class="section-title">No Liability</div><div class="section-sub">To the fullest extent permitted by law</div></div>
+    </div>
+    <p>The developers of BuildBoss FREE expressly disclaim all liability for any direct, indirect, incidental, special, consequential, or punitive damages arising from the use of or inability to use this App, including but not limited to:</p>
+    <ul class="list">
+      <li>Workplace accidents, injuries, or fatalities</li>
+      <li>Regulatory penalties or prosecution for non-compliance</li>
+      <li>Loss or corruption of data</li>
+      <li>Errors or omissions in App content</li>
+      <li>Reliance on App-generated documents in legal or regulatory proceedings</li>
+    </ul>
+    <p>This disclaimer does not affect your statutory rights under consumer protection legislation where applicable.</p>
+  </div>
+
+  <div class="footer-legal">
+    <p>© 2026 BuildBoss FREE · All rights reserved</p>
+    <p style="margin-top:4px"><a href="privacy-policy.html">Privacy Policy</a> · <a href="terms-and-conditions.html">Terms & Conditions</a></p>
+    <p style="margin-top:8px; font-size:10px; color:var(--txt3)">This disclaimer is provided for information only and does not constitute legal advice</p>
+  </div>
+
+</div>
+
+  <!-- Contact Section -->
+  <div style="margin:24px auto; max-width:680px; background:var(--sur2,#1e2028); border:1px solid var(--bdr,#2a2d35); border-radius:14px; padding:20px 24px;">
+    <p style="font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--gold,#f7c53b); margin-bottom:12px">Contact &amp; Support</p>
+    <p style="font-size:13px; color:var(--txt2,#b0b8c8); margin-bottom:8px">
+      📧 <a href="mailto:buildboss.free@gmail.com" style="color:var(--gold,#f7c53b); text-decoration:none; font-weight:600">buildboss.free@gmail.com</a>
+    </p>
+    <p style="font-size:13px; color:var(--txt2,#b0b8c8)">
+      🐙 <a href="https://github.com/gabrielbogdan5/buildboss-free" target="_blank" style="color:var(--gold,#f7c53b); text-decoration:none; font-weight:600">github.com/gabrielbogdan5/buildboss-free</a>
+    </p>
+  </div>
+
+</body>
+</html>

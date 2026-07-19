@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0a0c0f">
+<title>Page Not Found — BuildBoss FREE</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0c0f;--sur:#111418;--sur2:#181c22;--bdr:#252d3a;--gold:#f5c433;--glow:rgba(245,196,51,.18);--txt:#edf0f5;--txt2:#8a95a6;--txt3:#4a5568;--r:14px;--rsm:10px;--rlg:20px;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--txt);min-height:100dvh;max-width:480px;margin:0 auto;display:flex;flex-direction:column;}
+.topbar{display:flex;align-items:center;padding:14px 16px;background:var(--sur);border-bottom:1px solid var(--bdr);}
+.logo{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;letter-spacing:-.5px;line-height:1;text-decoration:none;color:var(--txt);}
+.logo span{color:var(--gold);}
+.logo small{font-size:10px;font-weight:800;letter-spacing:2px;color:var(--txt3);display:block;}
+.hazard-bar{height:6px;background:repeating-linear-gradient(-45deg,var(--gold),var(--gold) 6px,#111 6px,#111 12px);}
+.hero{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 24px;text-align:center;}
+.big-number{font-family:'Barlow Condensed',sans-serif;font-size:120px;font-weight:900;line-height:1;color:var(--gold);text-shadow:0 0 60px rgba(245,196,51,.25);letter-spacing:-4px;}
+.cone{font-size:56px;margin:8px 0;}
+.title{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:800;margin-bottom:8px;letter-spacing:-.3px;}
+.subtitle{font-size:14px;color:var(--txt2);line-height:1.6;max-width:300px;margin:0 auto 32px;}
+.btn-primary{background:var(--gold);color:#111;border:none;border-radius:var(--r);padding:14px 32px;font-family:'Barlow',sans-serif;font-size:15px;font-weight:800;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:transform .15s,box-shadow .15s;margin-bottom:12px;}
+.btn-primary:hover{box-shadow:0 6px 20px rgba(245,196,51,.35);}
+.btn-secondary{background:var(--sur);border:1px solid var(--bdr);border-radius:var(--r);padding:12px 24px;font-family:'Barlow',sans-serif;font-size:14px;font-weight:700;color:var(--txt2);cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;}
+.actions{display:flex;flex-direction:column;align-items:center;gap:10px;width:100%;max-width:280px;}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a href="index.html" class="logo">Build<span>Boss</span><small>FREE</small></a>
+</div>
+<div class="hazard-bar"></div>
+
+<div class="hero">
+  <div class="big-number">404</div>
+  <div class="cone">🚧</div>
+  <div class="title">Page Not Found</div>
+  <p class="subtitle">This page doesn't exist or has been moved. Let's get you back on site.</p>
+  <div class="actions">
+    <a href="index.html" class="btn-primary">🏠 Back to Home</a>
+    <a href="help.html" class="btn-secondary">❓ Go to Help</a>
+  </div>
+</div>
+</body>
+</html>

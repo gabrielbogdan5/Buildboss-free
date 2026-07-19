@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0a0c0f">
+<title>Help & FAQ — BuildBoss FREE</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0c0f;--sur:#111418;--sur2:#181c22;--bdr:#252d3a;--gold:#f5c433;--glow:rgba(245,196,51,.18);--txt:#edf0f5;--txt2:#8a95a6;--txt3:#4a5568;--r:14px;--rsm:10px;--rlg:20px;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--txt);min-height:100dvh;max-width:480px;margin:0 auto;padding-bottom:40px;}
+a{color:var(--gold);text-decoration:none;}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;background:var(--sur);border-bottom:1px solid var(--bdr);position:sticky;top:0;z-index:100;}
+.logo{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;letter-spacing:-.5px;line-height:1;text-decoration:none;color:var(--txt);}
+.logo span{color:var(--gold);}
+.logo small{font-size:10px;font-weight:800;letter-spacing:2px;color:var(--txt3);display:block;}
+.back-btn{background:var(--sur2);border:1px solid var(--bdr);border-radius:var(--rsm);color:var(--txt2);padding:8px 14px;font-family:'Barlow',sans-serif;font-size:13px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:6px;}
+.hazard-bar{height:6px;background:repeating-linear-gradient(-45deg,var(--gold),var(--gold) 6px,#111 6px,#111 12px);}
+.content{padding:20px 16px;}
+.page-title{font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:900;letter-spacing:-.5px;margin-bottom:4px;}
+.page-title span{color:var(--gold);}
+.page-sub{font-size:13px;color:var(--txt2);margin-bottom:24px;}
+/* Search */
+.search-wrap{position:relative;margin-bottom:20px;}
+.search-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:16px;}
+.search-inp{background:var(--sur);border:1px solid var(--bdr);border-radius:var(--r);color:var(--txt);font-family:'Barlow',sans-serif;font-size:14px;padding:13px 14px 13px 42px;width:100%;outline:none;transition:border-color .2s;}
+.search-inp::placeholder{color:var(--txt3);}
+.search-inp:focus{border-color:var(--gold);box-shadow:0 0 0 3px var(--glow);}
+/* Category tabs */
+.cats{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin-bottom:20px;padding-bottom:2px;}
+.cats::-webkit-scrollbar{display:none;}
+.cat-btn{background:var(--sur);border:1px solid var(--bdr);border-radius:20px;color:var(--txt2);font-family:'Barlow',sans-serif;font-size:12px;font-weight:700;padding:7px 14px;cursor:pointer;white-space:nowrap;transition:all .15s;}
+.cat-btn.active{background:rgba(245,196,51,.1);border-color:var(--gold);color:var(--gold);}
+/* FAQ accordion */
+.faq-group{margin-bottom:20px;}
+.faq-group-title{font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--txt3);margin-bottom:8px;padding-left:4px;}
+.faq-item{background:var(--sur);border:1px solid var(--bdr);border-radius:var(--r);margin-bottom:6px;overflow:hidden;}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;cursor:pointer;gap:12px;}
+.faq-q-text{font-size:14px;font-weight:700;line-height:1.4;}
+.faq-arrow{color:var(--txt3);font-size:18px;flex-shrink:0;transition:transform .25s;}
+.faq-item.open .faq-arrow{transform:rotate(180deg);}
+.faq-a{display:none;padding:0 16px 14px;font-size:13px;color:var(--txt2);line-height:1.7;border-top:1px solid var(--bdr);}
+.faq-a.show{display:block;}
+.faq-a p{margin-bottom:8px;}
+.faq-a p:last-child{margin-bottom:0;}
+.faq-a strong{color:var(--txt);}
+/* Contact banner */
+.contact-banner{background:var(--sur);border:1px solid var(--bdr);border-radius:var(--rlg);padding:18px 16px;display:flex;align-items:center;gap:14px;margin-top:8px;}
+.contact-icon{font-size:28px;flex-shrink:0;}
+.contact-title{font-weight:800;font-size:15px;margin-bottom:2px;}
+.contact-sub{font-size:12px;color:var(--txt2);}
+.contact-link{margin-left:auto;background:var(--gold);color:#111;border:none;border-radius:var(--rsm);padding:9px 16px;font-family:'Barlow',sans-serif;font-size:13px;font-weight:800;text-decoration:none;white-space:nowrap;}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a href="index.html" class="logo">Build<span>Boss</span><small>FREE</small></a>
+  <a href="index.html" class="back-btn">← Home</a>
+</div>
+<div class="hazard-bar"></div>
+
+<div class="content">
+  <div class="page-title">Help & <span>FAQ</span></div>
+  <p class="page-sub">Quick answers to common questions</p>
+
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input type="text" class="search-inp" id="faqSearch" placeholder="Search questions…" oninput="filterFAQ(this.value)">
+  </div>
+
+  <div class="cats">
+    <button class="cat-btn active" onclick="filterCat('all',this)">All</button>
+    <button class="cat-btn" onclick="filterCat('general',this)">General</button>
+    <button class="cat-btn" onclick="filterCat('data',this)">Data & Privacy</button>
+    <button class="cat-btn" onclick="filterCat('pdf',this)">PDF & Export</button>
+    <button class="cat-btn" onclick="filterCat('offline',this)">Offline</button>
+    <button class="cat-btn" onclick="filterCat('incident',this)">Incidents</button>
+  </div>
+
+  <!-- General -->
+  <div class="faq-group" data-cat="general">
+    <div class="faq-group-title">General</div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        <span class="faq-q-text">What is BuildBoss FREE?</span>
+        <span class="faq-arrow">⌄</span>
+      </div>
+      <div class="faq-a">
+        <p>BuildBoss FREE is a professional construction site management app. It lets you create <strong>Site Audits</strong>, <strong>Toolbox Talks</strong>, <strong>Daily Activity Briefings (DAB)</strong>, and <strong>Incident Reports</strong> — all from your phone, with no account required.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        <span class="faq-q-text">Do I need to create an account?</span>
+        <span class="faq-arrow">⌄</span>
+      </div>
+      <div class="faq-a">
+        <p><strong>No account required.</strong> BuildBoss FREE works entirely on your device. No sign-up, no login, no email needed. Just install and use.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        <span class="faq-q-text">Is BuildBoss FREE free?</span>
+        <span class="faq-arrow">⌄</span>
+      </div>
+      <div class="faq-a">
+        <p>Yes, BuildBoss FREE is free to use. All core features — audits, toolbox talks, DAB, and incident reports — are included at no cost.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        <span class="faq-q-text">How do I install the app?</span>
+        <span class="faq-arrow">⌄</span>
+      </div>
+      <div class="faq-a">
+        <p>BuildBoss FREE is a Progressive Web App (PWA). On Android, tap <strong>"Add to Home Screen"</strong> from your browser menu. On iOS (Safari), tap the Share button then <strong>"Add to Home Screen"</strong>.</p>
+        <p>You can also install it directly from the Google Play Store.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Data & Privacy -->
+  <div class="faq-group" data-cat="data">
+    <div class="faq-group-title">Data & Privacy</div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        <span class="faq-q-text">Where is my data stored?</span>
+        <span class="faq-arrow">⌄</span>
+      </div>
+      <div class="faq-a">
+        <p>All your data is stored <strong>locally on your device</strong> using IndexedDB. Nothing is sent to any server. Your reports stay private and on your phone.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        <span class="faq-q-text">Will I lose my data if I clear the app?</span>
+        <span class="faq-arrow">⌄</span>
+      </div>
+      <div class="faq-a">
+        <p>If you use <strong>Clear All Data</strong> in Settings, or clear your browser/app storage, your saved reports will be deleted. Always export important reports as PDFs before clearing data.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        <span class="faq-q-text">Does the app collect any personal data?</span>
+        <span class="faq-arrow">⌄</span>
+      </div>
+      <div class="faq-a">
+        <p>No. BuildBoss FREE does not collect, transmit, or store any personal data on external servers. See our <a href="privacy-policy.html">Privacy Policy</a> for full details.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PDF & Export -->
+  <div class="faq-group" data-cat="pdf">
+    <div class="faq-group-title">PDF & Export</div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        <span class="faq-q-text">How do I export a report as a PDF?</span>
+        <span class="faq-arrow">⌄</span>
+      </div>
+      <div class="faq-a">
+        <p>Navigate to the final step of any report (step <strong>Export</strong>) and tap the <strong>Export PDF</strong> button. Your device will open the print dialog — select "Save as PDF" or share it directly.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        <span class="faq-q-text">Can I add my company name to the PDF?</span>
+        <span class="faq-arrow">⌄</span>
+      </div>
+      <div class="faq-a">
+        <p>Yes! Go to <strong>Settings → PDF Options → Company Name</strong>. Whatever you enter will appear in the PDF footer on all exported documents.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        <span class="faq-q-text">Can I remove the date from the PDF?</span>
+        <span class="faq-arrow">⌄</span>
+      </div>
+      <div class="faq-a">
+        <p>Yes. In <strong>Settings → PDF Options</strong>, toggle off <strong>Show Date on PDF</strong>. The date will no longer appear in headers and footers.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Offline -->
+  <div class="faq-group" data-cat="offline">
+    <div class="faq-group-title">Offline Use</div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        <span class="faq-q-text">Does the app work without internet?</span>
+        <span class="faq-arrow">⌄</span>
+      </div>
+      <div class="faq-a">
+        <p><strong>Yes, fully offline.</strong> Once installed, BuildBoss FREE works with no internet connection. All features — including creating and exporting reports — are available offline.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        <span class="faq-q-text">The app is showing an "offline" page — what do I do?</span>
+        <span class="faq-arrow">⌄</span>
+      </div>
+      <div class="faq-a">
+        <p>This can happen if the app hasn't fully cached yet. Make sure you've opened the app at least once with an internet connection. Then close and reopen it — it should load normally offline.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Incidents -->
+  <div class="faq-group" data-cat="incident">
+    <div class="faq-group-title">Incident Reports</div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        <span class="faq-q-text">What is RIDDOR and do I need to report?</span>
+        <span class="faq-arrow">⌄</span>
+      </div>
+      <div class="faq-a">
+        <p>RIDDOR (Reporting of Injuries, Diseases and Dangerous Occurrences Regulations 2013) requires certain workplace incidents to be reported to the UK Health and Safety Executive (HSE).</p>
+        <p>This includes <strong>fatalities, specified injuries, over-7-day incapacitation, and dangerous occurrences</strong>. Visit <a href="https://www.hse.gov.uk/riddor/" target="_blank">hse.gov.uk/riddor</a> for full guidance.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFAQ(this)">
+        <span class="faq-q-text">What incident types can I report?</span>
+        <span class="faq-arrow">⌄</span>
+      </div>
+      <div class="faq-a">
+        <p>BuildBoss FREE supports four incident types:</p>
+        <p><strong>Accident</strong> — Injury occurred<br>
+        <strong>Near Miss</strong> — No injury, but could have<br>
+        <strong>Dangerous Occurrence</strong> — Reportable event<br>
+        <strong>Property Damage</strong> — Equipment or structure</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact banner -->
+  <div class="contact-banner">
+    <div class="contact-icon">✉️</div>
+    <div>
+      <div class="contact-title">Still need help?</div>
+      <div class="contact-sub">Our support team is ready</div>
+    </div>
+    <a href="contact.html" class="contact-link">Contact Us</a>
+  </div>
+</div>
+
+<script>
+function toggleFAQ(el){
+  const item=el.parentElement;
+  const ans=item.querySelector('.faq-a');
+  const isOpen=item.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.faq-item.open').forEach(i=>{
+    i.classList.remove('open');
+    i.querySelector('.faq-a').classList.remove('show');
+  });
+  if(!isOpen){item.classList.add('open');ans.classList.add('show');}
+}
+function filterFAQ(q){
+  q=q.toLowerCase();
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    const text=item.querySelector('.faq-q-text').textContent.toLowerCase();
+    const ans=item.querySelector('.faq-a').textContent.toLowerCase();
+    item.style.display=(text.includes(q)||ans.includes(q)||q==='')?'':'none';
+  });
+  document.querySelectorAll('.faq-group').forEach(g=>{
+    const visible=[...g.querySelectorAll('.faq-item')].some(i=>i.style.display!=='none');
+    g.style.display=visible?'':'none';
+  });
+}
+function filterCat(cat,btn){
+  document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.faq-group').forEach(g=>{
+    g.style.display=(cat==='all'||g.dataset.cat===cat)?'':'none';
+  });
+}
+</script>
+</body>
+</html>

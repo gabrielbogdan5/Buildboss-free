@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — BuildBoss FREE</title>
+<style>
+  :root {
+    --bg: #0e0e0e;
+    --sur: #1a1a1a;
+    --sur2: #242424;
+    --gold: #f5c518;
+    --txt: #f0f0f0;
+    --txt2: #aaa;
+    --txt3: #666;
+    --red: #e74c3c;
+    --green: #2ecc71;
+    --border: #2a2a2a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--txt); font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.7; }
+
+  header {
+    background: var(--sur);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .logo { font-size: 22px; font-weight: 800; letter-spacing: -0.5px; }
+  .logo span { color: var(--gold); }
+  .logo sub { font-size: 10px; font-weight: 600; color: var(--txt3); letter-spacing: 1px; text-transform: uppercase; margin-left: 2px; }
+  .badge {
+    margin-left: auto;
+    background: rgba(245,197,24,0.12);
+    color: var(--gold);
+    border: 1px solid rgba(245,197,24,0.3);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #1a1a1a 0%, #111 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 36px 20px 28px;
+    text-align: center;
+  }
+  .hero-icon { font-size: 40px; margin-bottom: 12px; }
+  .hero h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 8px; }
+  .hero h1 span { color: var(--gold); }
+  .hero p { color: var(--txt2); font-size: 13px; max-width: 480px; margin: 0 auto; }
+  .meta-row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+  }
+  .meta-chip {
+    background: var(--sur2);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 11px;
+    color: var(--txt2);
+  }
+  .meta-chip strong { color: var(--txt); }
+
+  .container { max-width: 720px; margin: 0 auto; padding: 28px 20px 60px; }
+
+  .toc {
+    background: var(--sur);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 28px;
+  }
+  .toc h3 { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--txt3); margin-bottom: 12px; }
+  .toc a {
+    display: block;
+    color: var(--txt2);
+    text-decoration: none;
+    font-size: 13px;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--border);
+    transition: color 0.2s;
+  }
+  .toc a:last-child { border-bottom: none; }
+  .toc a:hover { color: var(--gold); }
+  .toc a::before { content: '→ '; color: var(--gold); font-size: 11px; }
+
+  .section {
+    background: var(--sur);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-icon {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  .section-title { font-size: 15px; font-weight: 700; }
+  .section-num { font-size: 11px; color: var(--txt3); margin-top: 1px; }
+
+  .section p { color: var(--txt2); font-size: 13px; margin-bottom: 10px; }
+  .section p:last-child { margin-bottom: 0; }
+  .section strong { color: var(--txt); }
+
+  .highlight-box {
+    background: rgba(245,197,24,0.06);
+    border: 1px solid rgba(245,197,24,0.2);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin: 12px 0;
+  }
+  .highlight-box p { color: var(--txt); margin: 0; font-size: 13px; }
+
+  .green-box {
+    background: rgba(46,204,113,0.06);
+    border: 1px solid rgba(46,204,113,0.2);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin: 12px 0;
+  }
+  .green-box p { color: var(--txt); margin: 0; font-size: 13px; }
+  .green-box .label { color: var(--green); font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 4px; }
+
+  .list { list-style: none; padding: 0; margin: 10px 0; }
+  .list li {
+    color: var(--txt2);
+    font-size: 13px;
+    padding: 6px 0 6px 20px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .list li:last-child { border-bottom: none; }
+  .list li::before { content: '•'; color: var(--gold); position: absolute; left: 4px; }
+  .list li strong { color: var(--txt); }
+
+  .rights-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin: 12px 0;
+  }
+  .right-card {
+    background: var(--sur2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px;
+  }
+  .right-card .r-icon { font-size: 18px; margin-bottom: 4px; }
+  .right-card .r-title { font-size: 12px; font-weight: 700; color: var(--txt); margin-bottom: 2px; }
+  .right-card .r-desc { font-size: 11px; color: var(--txt3); line-height: 1.4; }
+
+  .contact-box {
+    background: var(--sur2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    margin-top: 12px;
+  }
+  .contact-box .c-label { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: var(--txt3); margin-bottom: 8px; }
+  .contact-box .c-line { font-size: 13px; color: var(--txt2); padding: 4px 0; }
+  .contact-box .c-line strong { color: var(--txt); }
+
+  .footer-legal {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--txt3);
+    font-size: 11px;
+    line-height: 1.8;
+  }
+  .footer-legal a { color: var(--gold); text-decoration: none; }
+
+  @media (max-width: 480px) {
+    .rights-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Build<span>Boss</span><sub>PRO</sub></div>
+  <div class="badge">🛡️ Privacy Policy</div>
+</header>
+
+<div class="hero">
+  <div class="hero-icon">🔒</div>
+  <h1>Your Privacy <span>Matters</span></h1>
+  <p>BuildBoss FREE is designed with privacy first. All your data stays on your device — always.</p>
+  <div class="meta-row">
+    <div class="meta-chip"><strong>Effective:</strong> 30 May 2026</div>
+    <div class="meta-chip"><strong>Version:</strong> 2.0.0</div>
+    <div class="meta-chip"><strong>Jurisdiction:</strong> UK & Worldwide</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="toc">
+    <h3>Contents</h3>
+    <a href="#s1">1. Who We Are</a>
+    <a href="#s2">2. What Data We Collect</a>
+    <a href="#s3">3. How We Store Your Data</a>
+    <a href="#s4">4. How We Use Your Data</a>
+    <a href="#s5">5. Data Sharing & Third Parties</a>
+    <a href="#s6">6. Your Rights (UK GDPR / GDPR)</a>
+    <a href="#s7">7. Data Retention</a>
+    <a href="#s8">8. Security</a>
+    <a href="#s9">9. Children's Privacy</a>
+    <a href="#s10">10. Changes to This Policy</a>
+    <a href="#s11">11. Contact Us</a>
+  </div>
+
+  <!-- 1 -->
+  <div class="section" id="s1">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(245,197,24,0.1)">🏗️</div>
+      <div><div class="section-title">Who We Are</div><div class="section-num">Section 1</div></div>
+    </div>
+    <p><strong>BuildBoss FREE</strong> is a construction site management application designed to assist site managers, supervisors, and safety officers with audits, toolbox talks, daily activity briefings (DABs), and incident reporting.</p>
+    <p>This application is developed as an independent software product. For privacy enquiries, please use the contact details in Section 11.</p>
+    <div class="highlight-box">
+      <p>⚖️ <strong>Applicable Law:</strong> This policy is written in compliance with the <strong>UK General Data Protection Regulation (UK GDPR)</strong>, the <strong>Data Protection Act 2018</strong>, and the EU <strong>GDPR (Regulation 2016/679)</strong> for international users.</p>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="section" id="s2">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(52,152,219,0.1)">📋</div>
+      <div><div class="section-title">What Data We Collect</div><div class="section-num">Section 2</div></div>
+    </div>
+    <div class="green-box">
+      <div class="label">✅ Key Fact</div>
+      <p>BuildBoss FREE does <strong>not</strong> collect, transmit, or store any data on remote servers. We have no backend, no database, and no cloud infrastructure.</p>
+    </div>
+    <p>Data entered into the app remains exclusively on your device. This may include:</p>
+    <ul class="list">
+      <li><strong>Job & site information</strong> — project names, site addresses, job references</li>
+      <li><strong>Personnel names</strong> — inspector, manager, supervisor names you enter</li>
+      <li><strong>Incident records</strong> — incident type, location, description, dates</li>
+      <li><strong>Photographs</strong> — images attached to audit issues (compressed and stored locally)</li>
+      <li><strong>Signatures</strong> — digital signatures captured within the app (stored locally as image data)</li>
+      <li><strong>App preferences</strong> — theme, language, PDF settings (stored in localStorage)</li>
+    </ul>
+    <p>We do <strong>not</strong> collect: names, emails, phone numbers, location data, device identifiers, IP addresses, or any analytics data.</p>
+  </div>
+
+  <!-- 3 -->
+  <div class="section" id="s3">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(46,204,113,0.1)">💾</div>
+      <div><div class="section-title">How We Store Your Data</div><div class="section-num">Section 3</div></div>
+    </div>
+    <p>All data is stored locally on your device using standard browser storage technologies:</p>
+    <ul class="list">
+      <li><strong>IndexedDB</strong> — used for job records, reports, photos, and signatures. Supports larger data volumes.</li>
+      <li><strong>localStorage</strong> — used for app settings and preferences only (theme, PDF date toggle, company name).</li>
+    </ul>
+    <p>This data is controlled entirely by you. It can be cleared at any time via your browser or device settings, or using the <strong>Clear All Data</strong> option within the app.</p>
+    <div class="highlight-box">
+      <p>📱 <strong>Important:</strong> Data does not sync between devices. If you clear your browser storage or uninstall the app, all locally stored data will be permanently deleted. We recommend exporting important reports as PDF before clearing data.</p>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="section" id="s4">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(155,89,182,0.1)">⚙️</div>
+      <div><div class="section-title">How We Use Your Data</div><div class="section-num">Section 4</div></div>
+    </div>
+    <p>Data entered into BuildBoss FREE is used solely to provide the app's core functionality:</p>
+    <ul class="list">
+      <li>Generating site inspection and audit reports</li>
+      <li>Producing toolbox talk records and sign-off sheets</li>
+      <li>Creating daily activity briefing (DAB) documents</li>
+      <li>Recording and documenting site incidents</li>
+      <li>Exporting reports as PDF documents</li>
+      <li>Saving and retrieving job history on your device</li>
+    </ul>
+    <p>We do <strong>not</strong> use your data for marketing, profiling, advertising, or any purpose beyond operating the app on your device.</p>
+  </div>
+
+  <!-- 5 -->
+  <div class="section" id="s5">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(231,76,60,0.1)">🚫</div>
+      <div><div class="section-title">Data Sharing & Third Parties</div><div class="section-num">Section 5</div></div>
+    </div>
+    <div class="green-box">
+      <div class="label">✅ Clear Statement</div>
+      <p>We do <strong>not</strong> sell, rent, share, or disclose your data to any third party, for any reason, at any time.</p>
+    </div>
+    <p>The app uses the following third-party resources delivered via CDN, which may set standard browser caches but do not receive your app data:</p>
+    <ul class="list">
+      <li><strong>Google Fonts</strong> — typography only, loaded from fonts.googleapis.com. No app data is transmitted. (<a href="https://policies.google.com/privacy" style="color:var(--gold)">Google Privacy Policy</a>)</li>
+    </ul>
+    <p>When you choose to <strong>Share via WhatsApp</strong> or <strong>Export PDF</strong>, data leaves the app only as initiated by you, under your control, using your device's native share functionality.</p>
+    <p><strong>RIDDOR Reporting (UK):</strong> If an incident requires reporting to the HSE under RIDDOR 2013, this is the user's legal responsibility. The app provides a reminder link to hse.gov.uk/riddor but does not submit any data automatically.</p>
+  </div>
+
+  <!-- 6 -->
+  <div class="section" id="s6">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(245,197,24,0.1)">⚖️</div>
+      <div><div class="section-title">Your Rights (UK GDPR / GDPR)</div><div class="section-num">Section 6</div></div>
+    </div>
+    <p>Under UK GDPR and EU GDPR, you have the following rights regarding personal data. Because all data is stored locally on your device, you can exercise most of these rights directly within the app:</p>
+    <div class="rights-grid">
+      <div class="right-card">
+        <div class="r-icon">👁️</div>
+        <div class="r-title">Right of Access</div>
+        <div class="r-desc">View all your data via Jobs History at any time.</div>
+      </div>
+      <div class="right-card">
+        <div class="r-icon">✏️</div>
+        <div class="r-title">Right to Rectification</div>
+        <div class="r-desc">Edit any record directly within the app.</div>
+      </div>
+      <div class="right-card">
+        <div class="r-icon">🗑️</div>
+        <div class="r-title">Right to Erasure</div>
+        <div class="r-desc">Delete individual jobs or clear all data via Settings → Clear All Data.</div>
+      </div>
+      <div class="right-card">
+        <div class="r-icon">📦</div>
+        <div class="r-title">Right to Portability</div>
+        <div class="r-desc">Export any report as PDF for transfer or archiving.</div>
+      </div>
+      <div class="right-card">
+        <div class="r-icon">🚫</div>
+        <div class="r-title">Right to Object</div>
+        <div class="r-desc">No processing occurs beyond your device — nothing to object to.</div>
+      </div>
+      <div class="right-card">
+        <div class="r-icon">🔒</div>
+        <div class="r-title">Right to Restriction</div>
+        <div class="r-desc">You control all data locally — restrict use by managing your device storage.</div>
+      </div>
+    </div>
+    <p>If you believe your data rights have been violated, you have the right to lodge a complaint with the <strong>Information Commissioner's Office (ICO)</strong> in the UK: <a href="https://ico.org.uk" style="color:var(--gold)">ico.org.uk</a> | 0303 123 1113.</p>
+    <p>EU users may contact their national supervisory authority.</p>
+  </div>
+
+  <!-- 7 -->
+  <div class="section" id="s7">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(52,152,219,0.1)">🕐</div>
+      <div><div class="section-title">Data Retention</div><div class="section-num">Section 7</div></div>
+    </div>
+    <p>Data is retained on your device for as long as you choose to keep it. There is no automatic deletion or expiry.</p>
+    <p><strong>Your responsibility:</strong> Under UK law (including CDM Regulations 2015 and RIDDOR 2013), certain construction records must be retained for specific periods. Users are responsible for maintaining appropriate records in line with applicable legislation. BuildBoss FREE does not enforce or manage retention on your behalf.</p>
+    <ul class="list">
+      <li><strong>RIDDOR records</strong> — must be kept for at least 3 years (UK law)</li>
+      <li><strong>Accident book entries</strong> — recommended 3 years minimum</li>
+      <li><strong>Site inspection records</strong> — typically retained for the duration of the project plus 6 years</li>
+    </ul>
+    <p>We recommend exporting important reports as PDF and storing them securely outside the app.</p>
+  </div>
+
+  <!-- 8 -->
+  <div class="section" id="s8">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(46,204,113,0.1)">🔐</div>
+      <div><div class="section-title">Security</div><div class="section-num">Section 8</div></div>
+    </div>
+    <p>Since all data is stored locally on your device, security depends primarily on your device's own security measures (screen lock, encryption, etc.).</p>
+    <p>We recommend:</p>
+    <ul class="list">
+      <li>Keeping your device screen locked with a PIN, password, or biometric</li>
+      <li>Enabling device storage encryption (enabled by default on most modern Android and iOS devices)</li>
+      <li>Regularly exporting and backing up important reports</li>
+      <li>Deleting sensitive job records when no longer needed</li>
+    </ul>
+    <p>The app itself does not implement authentication — anyone with access to your device can access app data. Treat your device accordingly.</p>
+  </div>
+
+  <!-- 9 -->
+  <div class="section" id="s9">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(231,76,60,0.1)">👶</div>
+      <div><div class="section-title">Children's Privacy</div><div class="section-num">Section 9</div></div>
+    </div>
+    <p>BuildBoss FREE is intended exclusively for use by <strong>adults (18+)</strong> in a professional construction or site management context.</p>
+    <p>The app is not directed at children and does not knowingly collect data from anyone under the age of 18. If you believe a minor is using the app, please contact us immediately.</p>
+  </div>
+
+  <!-- 10 -->
+  <div class="section" id="s10">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(155,89,182,0.1)">📝</div>
+      <div><div class="section-title">Changes to This Policy</div><div class="section-num">Section 10</div></div>
+    </div>
+    <p>We may update this Privacy Policy from time to time. When we do, the <strong>Effective Date</strong> at the top of this page will be updated.</p>
+    <p>Continued use of BuildBoss FREE following any changes constitutes acceptance of the updated policy. We encourage you to review this policy periodically.</p>
+    <p>Significant changes that affect how data is handled will be communicated via an in-app notice.</p>
+  </div>
+
+  <!-- 11 -->
+  <div class="section" id="s11">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(245,197,24,0.1)">📬</div>
+      <div><div class="section-title">Contact Us</div><div class="section-num">Section 11</div></div>
+    </div>
+    <p>For any privacy-related questions, requests, or complaints regarding BuildBoss FREE, please contact:</p>
+    <div class="contact-box">
+      <div class="c-label">Developer Contact</div>
+      <div class="c-line"><strong>App:</strong> BuildBoss FREE</div>
+      <div class="c-line"><strong>Version:</strong> 2.0.0</div>
+      <div class="c-line"><strong>Platform:</strong> Google Play Store (Android)</div>
+      <div class="c-line" style="margin-top:8px; font-size:12px; color:var(--txt3)">Contact available via the Google Play Store listing page.</div>
+    </div>
+    <p style="margin-top:14px">We aim to respond to all privacy enquiries within <strong>30 days</strong>, in line with UK GDPR requirements.</p>
+  </div>
+
+  <div class="footer-legal">
+    <p>© 2026 BuildBoss FREE · All rights reserved</p>
+    <p style="margin-top:4px"><a href="terms-and-conditions.html">Terms & Conditions</a> · <a href="legal-disclaimer.html">Legal Disclaimer</a></p>
+    <p style="margin-top:8px; font-size:10px; color:var(--txt3)">This policy complies with UK GDPR, Data Protection Act 2018, and EU GDPR (Regulation 2016/679)</p>
+  </div>
+
+</div>
+
+  <!-- Contact Section -->
+  <div style="margin:24px auto; max-width:680px; background:var(--sur2,#1e2028); border:1px solid var(--bdr,#2a2d35); border-radius:14px; padding:20px 24px;">
+    <p style="font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--gold,#f7c53b); margin-bottom:12px">Contact &amp; Support</p>
+    <p style="font-size:13px; color:var(--txt2,#b0b8c8); margin-bottom:8px">
+      📧 <a href="mailto:buildboss.free@gmail.com" style="color:var(--gold,#f7c53b); text-decoration:none; font-weight:600">buildboss.free@gmail.com</a>
+    </p>
+    <p style="font-size:13px; color:var(--txt2,#b0b8c8)">
+      🐙 <a href="https://github.com/gabrielbogdan5/buildboss-free" target="_blank" style="color:var(--gold,#f7c53b); text-decoration:none; font-weight:600">github.com/gabrielbogdan5/buildboss-free</a>
+    </p>
+  </div>
+
+</body>
+</html>
